@@ -1,0 +1,9 @@
+---
+# logs/tasks/main.yml
+
+- name: Install Packages
+  apt: >
+    pkg={{ item }}
+    state=latest
+  with_items:
+    - logwatch
